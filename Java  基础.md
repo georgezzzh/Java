@@ -34,9 +34,12 @@ String str=new String("abc");
 
 <pre><code>import java.util.Random
     Random generator=new Random();
+    //生成0-9的随机数，包含9
+    //如果想生成5-9的树，直接generator.nextInt(10)+5;即可
     int num1=generator.nextInt(10);
     float num2=generator.nextFloat();
 </pre>
+
 
 方法
 
