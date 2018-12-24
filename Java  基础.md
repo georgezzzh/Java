@@ -1,9 +1,5 @@
 ## Java  基础
 
-### 包的使用
-
-![1543390046729](C:\Users\geoge\AppData\Roaming\Typora\typora-user-images\1543390046729.png)
-
 ### Java API
 
 <a href="https://docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html">英文API</a>
@@ -58,11 +54,14 @@ System.out.println(num1+" "+num2);</code></pre>
 
 #### Scanner类
 
-1) 从键盘中获取输入
+1) 从键盘中获取输入   
 
-<pre><code>Scanner scan1=new Scanner(System.in);
-System.out.println("请输入String类数据: ");
-String str=scan1.next();
-System.out.println(str);
-int i=scan1.nextInt();
-System.out.println(i);</code></pre>
+
+        Scanner scan1=new Scanner(System.in);
+        System.out.println("请输入String类数据: ");
+        String str=scan1.next();
+        System.out.println(str);
+        int i=scan1.nextInt();
+        System.out.println(i);
+## 源文件命名
+如果一个Java源文件里定义的索要类都没有使用public修饰，则这个Java源文件的文件名可以是一切合法的文件名。但是如果一个java源文件里定义了一个Public修饰的类，则这个源文件的文件名必须与public修饰的类的类名相同。
