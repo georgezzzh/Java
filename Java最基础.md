@@ -66,3 +66,8 @@ String str=new String("abc");
     System.out.println(i);
 ## 源文件命名
 如果一个Java源文件里定义的索要类都没有使用public修饰，则这个Java源文件的文件名可以是一切合法的文件名。但是如果一个java源文件里定义了一个Public修饰的类，则这个源文件的文件名必须与public修饰的类的类名相同。
+## 包的概念package
+Java使用包来管理一些类，类似C语言中include
+![5Wrbih.png](https://s1.ax2x.com/2018/12/27/5Wrbih.png)  
+目录应该这样放置。然后在该JUMP文件夹下的JUMP.class下包含一句`package JUMP`就形成了一个包。  
+在Main类中开头`import JUMP.*`就全部导入了JUMP包中的类了  
