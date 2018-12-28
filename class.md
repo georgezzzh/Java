@@ -11,7 +11,7 @@
     }
     }
     public class Main {
-
+    
       public static void main(String[]args){
     Person per=new Person();
     per.name="george";
@@ -49,7 +49,7 @@ private，被声明为private的成员只能被此类中的其他成员访问，
          }
         }
         public class Main {
-
+    
         public static void main(String[]args){
         //匿名对象
         new Person("george",20).speak();
@@ -60,7 +60,7 @@ private，被声明为private的成员只能被此类中的其他成员访问，
 ### this
 含义：this代表对象自身的引用  
 作用：(1) 解决变量名冲突.  
-     (2)解决不确定性的问题.   
+​     (2)解决不确定性的问题.   
 
     public Person(String name,int age){
         //使用this解决变量名冲突
@@ -88,16 +88,16 @@ private，被声明为private的成员只能被此类中的其他成员访问，
              this.age=age;
          }
        public String getInfo(){
-        return "姓名"+name+"年龄"+age;
+    ​    return "姓名"+name+"年龄"+age;
        }
-         }
+    ​     }
        public class Main {
 
        public static void main(String[]args){
        Person per=new Person("george",20);
        System.out.println(per.getInfo());
-        }
-        }
+    ​    }
+    ​    }
 ## static关键字
 *由static声明的属性，叫静态属性。*  
 *由static声明的方法，叫静态方法。*   
@@ -139,7 +139,7 @@ private，被声明为private的成员只能被此类中的其他成员访问，
         System.out.println("name "+this.name+" age: "+this.age+" "+this.school);
     }
     }
-
+    
     public class Main {
     public static void main(String[]args){
         Person.setSchool("Tsinghua University");
@@ -154,7 +154,7 @@ private，被声明为private的成员只能被此类中的其他成员访问，
 
 静态属性存储在: data segment  
 非静态属性存储在: 内存的堆中
-### **特殊的静态方法---mian()**   
+### **特殊的静态方法---main()**   
 > public——权限修饰符：权限最大。保证任何位置都可以访问该函数，不受任何限制。  
 static——静态修饰符：无需实例化，可以直接由类名称调用。  
 void——返回值为空：main()是程序的起点，无返回值。  
