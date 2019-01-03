@@ -1,4 +1,10 @@
 ## Java  基础
+### 命令行编译java文件
+配置好环境变量后，执行编译时，切换到当前目录，例如  
+
+        cd C:\Users\geoge\Desktop
+        javac example.java
+        java example
 
 ### Java API
 
