@@ -1,13 +1,3 @@
-##  1. String类
-
-1）静态方式----采用直接赋值方法
-
-String str="abc";
-
-2)动态方式----使用new动态分配内存方式
-
-String str=new String("abc");
-
 ### 两个string对象比较
 
     String str1="abc";
