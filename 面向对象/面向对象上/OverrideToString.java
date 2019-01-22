@@ -28,7 +28,7 @@ class Person{
             return false;
     }
 }
-public class Main {
+public class OverrideToString{
 
     public static void main(String[] args) {
         Person p1=new Person("Tom Tonny",10);
