@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--混蛋一定要记住meta中用中文编码-->
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<script>
+    function doclick(){
+    var xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+      if(xhr.readyState==4){
+        try{
+          if((xhr.status>=200&&xhr.status<300)||xhr.status==304){
+            console.log(xhr.responseText);
+          }else{
+            console.log("request was unsuccessful "+xhr.status);
+          }
+        }catch(ex){
+          //假设由ontimeout事件处理程序
+        }
+      }
+    }
+    xhr.open("get","/mypage/index",true);
+    xhr.timeout=1000;
+    xhr.ontimeout=function(){
+      console.log("request did not return in a second");
+    };
+    xhr.send(null);
+    }
+    
+</script>
+    </head>
+    <body>
+      Can you display Chinese?
+      <form method="post" action="/mypage/index">
+        <input type="text" name="firstName" placeholder="姓"/>
+        <input type="submit" value="发送表单">
+      </form>
+        <button onclick="doclick()">获得Java给的反馈</button>
+    </body>
+</html>
