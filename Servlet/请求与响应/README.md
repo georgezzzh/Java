@@ -56,7 +56,7 @@ out.write(ByteArray);
         }
         os.close();
 
-### Servlet重定向
+### Servlet重定向&文件路径
 >`response.sendRedirect("https://www.baidu.com");`Http相应中状态是301为重定向。  
 
 在sendRedrect()可以使用绝对URL，也可以使用相对URL，相对URL有两种类型，前面有斜线("/")和没有斜线。   
