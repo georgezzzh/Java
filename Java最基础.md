@@ -5,6 +5,11 @@
         cd C:\Users\geoge\Desktop
         javac example.java
         java example
+### 编译引用其他的包的Java程序
+* 进行编译，编译的命令：`javac -cp D:\iitshare.jar D:\com\iitshare\model\CallIitShare.java`
+* 进行执行，执行的命令：`java -cp .;iitshare.jar com.iitshare.model.CallIitShare`
+
+
 
 ### Java API
 
