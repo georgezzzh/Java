@@ -16,12 +16,14 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
 public class PostJsopu {
+    //手工输入验证码
     public static String captcha(){
         Scanner in=new Scanner(System.in);
         String tmp=in.nextLine();
         return tmp;
     }
-    public static void printGrade(String file) throws IOException{
+    //打印服务器发回来的JSON数据
+    public static void printGrade(String file){
 
         JsonParser parser=new JsonParser();
         //JsonObject object=(JsonObject)parser.parse(new FileReader("C:\\Users\\geoge\\Desktop\\json.txt"));
@@ -30,10 +32,12 @@ public class PostJsopu {
         for(JsonElement arr:array)
             System.out.println(arr);
     }
+    //查询成绩
     public static void queryGrade(String url,Map<String,String>cookies) throws IOException{
         Connection conn=Jsoup.connect(url);
         cookies.put("selectionBar","125803405");
         conn.cookies(cookies);
+        //设置头部
         conn.header("Referer","http://zhjw.scu.edu.cn/student/integratedQuery/scoreQuery/allPassingScores/index");
         conn.header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
         conn.header("Connection","keep-alive");
@@ -50,6 +54,7 @@ public class PostJsopu {
         //System.out.println(resp.body());
         printGrade(resp.body());
     }
+    //登录页面
     public static void login() throws IOException {
 
         HttpClient httpClient = new HttpClient();
@@ -69,7 +74,6 @@ public class PostJsopu {
                 String[]ctemp=c1.toString().split("=");
                 cookieMap.put(ctemp[0],ctemp[1]);
             }
-
             FileOutputStream fs = new FileOutputStream(new File("C:\\Users\\geoge\\Desktop\\img.png"));
             InputStream is = getMethod1.getResponseBodyAsStream();
             byte[] b = new byte[1024];
@@ -104,17 +108,14 @@ public class PostJsopu {
         System.out.println("form datas:"+datas);
         Connection.Response resp=con2.ignoreContentType(true).method(Connection.Method.POST).data(datas).cookies(cookieMap).execute();
         System.out.println("loginBeforeCookie: "+cookieMap);
-        //
+
         Map<String,String> logincookie=resp.cookies();
         System.out.println("loginCookie: "+logincookie);
 
-        //System.out.println(resp.body());
         String gradeUrl="http://zhjw.scu.edu.cn/student/integratedQuery/scoreQuery/allTermScores/data";
         queryGrade(gradeUrl,cookieMap);
     }
-
     public static void main(String[]args){
-
         try{
             login();
         }catch (Exception e){
