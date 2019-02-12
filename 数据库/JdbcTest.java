@@ -1,11 +1,12 @@
 import java.sql.*;
 public class JdbcTest {
 public static Connection getConn(){
+    //如果是mysql-connector-java-5.1.47-bin,路径是"com.mysql.jdbc.Driver"
     String driver="com.mysql.cj.jdbc.Driver";
     //数据库student
     //表students
     String url="jdbc:mysql://localhost:3306/student?"+"user=root&password=*****&useUnicode=true&characterEncoding=UTF8&"+
-            "serverTimezone=GMT%2B8";
+            "serverTimezone=GMT%2B8&useSSL=false";
     Connection conn=null;
     PreparedStatement statement=null;
     ResultSet result=null;
@@ -28,7 +29,12 @@ public static Connection getConn(){
         e.printStackTrace();
     }catch (SQLException e){
         e.printStackTrace();
-    }finally {
+    }
+    //剩下一定要捕获异常，否则bug发现不了很难受
+    catch(Exception e){
+    e.printStackTrace();
+    }
+    finally {
 
     }
     return conn;
