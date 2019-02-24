@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<!--配置第一个Servlet-->
+<servlet>
+<servlet-name>TestJSP</servlet-name>
+<servlet-class>foo.TestJsp</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>TestJSP</servlet-name>
+<url-pattern>/uploadData</url-pattern>
+</servlet-mapping>
+<!--配置错误页面-->
+<error-page>
+<error-code>404</error-code>
+<location>/errorPage.jsp</location>
+</error-page>
+</web-app> 
