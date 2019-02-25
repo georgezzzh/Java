@@ -115,22 +115,3 @@ URL编码意思是，将不安全的保留字符替换为其他字符，然后�
 2.     
 
     <%@page errorPage="./errorPage.jsp"%>
-## 在DD中配置错误页面
-1. 根据一个HTTP状态码声明错误页面    
-
-        <error-page>
-        <error-code>404</error-code>
-        <location>/notFoundError.jsp</location>
-        </error-page>
-2. 声明一个"普遍"类型的错误页面    
-
-        <error-page>
-            <exception-type>java.lang.Throwable</exception-type>
-            <location>/errorPage.jsp</location>
-        </error-page>
-3. 声明一个更明确的错误页面    
-
-        <error-page>
-            <exception-type>java.lang.ArithmeticException</exception-type>
-            <location>/errorPage.jsp</location>
-        </error-page>
