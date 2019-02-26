@@ -7,6 +7,8 @@
     use world; #这里world是一个数据库
 ### 显示某个数据库中的所有表
     show tables;
+### 显示表的结构
+    desc user;#user是一张table
 ### 修改某一列的类型
     ALTER TABLE user MODIFY password CHAR(32);
 ### 修改某一列成为自增长
