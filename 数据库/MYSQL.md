@@ -1,3 +1,6 @@
+## Linux开机启动MYSQL
+    ./mysqld_safe &
+ 详细内容参考<a href="https://blog.csdn.net/king_1421484363/article/details/73277771">Linux平台MYSQL的开关</a>
 ## 命令行开启命令
     mysql -uroot -p
 然后键入密码即可
