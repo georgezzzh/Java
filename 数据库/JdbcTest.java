@@ -1,7 +1,7 @@
 import java.sql.*;
 public class JdbcTest {
 public static Connection getConn(){
-    //如果是mysql-connector-java-5.1.47-bin,路径是"com.mysql.jdbc.Driver"
+    //旧版本，路径是"com.mysql.jdbc.Driver"，新版本如下
     String driver="com.mysql.cj.jdbc.Driver";
     //数据库student
     //表students
