@@ -1,0 +1,30 @@
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+信息: myLogger begin log something
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+较详细: ENTRY
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+信息: param test param1 param2
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+信息: log path is: C:\Users\geoge\Desktop\log.txt
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+严重: severe
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+警告: warning
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+配置: config
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+详细: fine
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+较详细: finer
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+非常详细: finest
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+信息: log p
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoogerStart main
+较详细: THROW
+java.io.IOException
+	at com.sonydafa.LoggerStart.main(LoggerStart.java:36)
+	at Start.main(Start.java:8)
+
+6月 10, 2019 7:23:51 下午 com.sonydafa.LoggerStart main
+较详细: RETURN
