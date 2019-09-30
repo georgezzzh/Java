@@ -1,0 +1,3 @@
+爬虫只用Jsoup基本可以解决大部分问题
+除了Jsoup擅长的解析html页面
+Jsoup还可以进行设置cookie之类的能力，具体功能参见*paper_spider*子项目
