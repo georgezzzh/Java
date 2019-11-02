@@ -62,7 +62,7 @@ cookie不能工作时，容器就会求助与URL重写，但是只有对响应�
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-
+    
         HttpSession session=request.getSession();
         //用在重定向中，而且还包含SessionID
         response.sendRedirect(response.encodeRedirectURL("attr"));
@@ -92,7 +92,7 @@ cookie不能工作时，容器就会求助与URL重写，但是只有对响应�
 * 在DD种配置会话超时  
 在DD种配置会话超时与在所创建的每个会话上调用setMaxInactiveInterval()有同样的效果。   
 
-    
+  
         <web-app>
         <servlet>
             ...
@@ -127,4 +127,4 @@ session经过测试，应该是浏览器关闭(所有标签页)，重新打开�
         session.setMaxInactiveInterval(60*60);
         writer.write("<br/>Reset Max InactiveInterval time is "+session.getMaxInactiveInterval()+"s");
     }
-![](https://github.com/Geogechou/imageRepo/raw/master/Servlet%E5%AD%A6%E4%B9%A0/1.png)
+![](image/1.png)

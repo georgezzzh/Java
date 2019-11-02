@@ -4,7 +4,7 @@
 
 1. 把应用依赖的包放在tomcat\lib下
 2. 打成WAR包时，把整个项目的所有内容全部打包，WAR包名为项目的名字，放在tomcat\webapp下即可。tomcat会自动解压包。
-![](https://github.com/Geogechou/imageRepo/raw/master/Servlet%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.png)
+![项目配置示意图](image/3.png)
 
 ## Servlet映射
 三种`<url-pattern>元素`  

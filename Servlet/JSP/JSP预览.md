@@ -1,6 +1,7 @@
 ### JSP工作原理
 容器拿到在JSP中写的代码，把这些代码转化为一个servlet类源(.java)文件，然后再把这个源文件编译为Java Servlet类。  
-![](https://github.com/Geogechou/imageRepo/raw/master/Servlet%E5%AD%A6%E4%B9%A0/2.png)   
+![](../image/2.png)   
+
 ### 使用page指定导入包
     <%@page import="foo.*"%>
     <html>
