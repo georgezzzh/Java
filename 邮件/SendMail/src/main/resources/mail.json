@@ -1,0 +1,6 @@
+{
+  "user": "name",
+  "from": "source@163.com",
+  "password": "邮箱授权码",
+  "to": "target@qq.com"
+}
