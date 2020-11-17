@@ -1,39 +1,35 @@
-## IDEA中的MAVEN项目
+修改maven的配置文件，达到每次在IDEA新建项目时候，默认编译Java版本是1.8+
 
-IDEA中新建maven项目，jdk默认是jdk5，jdk5太老了，会有一大堆错误。
+![IDEA修改maven](https://github.com/georgezzzh/resource/raw/master/IDEA/maven1.png)
 
-### 1.首先到maven中的conf目录下的**settings.xml**中配置
 
-在profiles节点下添加如下代码
+
+在IDEA中User Settings file中显示的目录，也就是`/home/george/.m2/settings.xml`配置文件中修改。
+
+主要是修改其中的profile, 设定编译的jdk版本。
 
 ```xml
- <profile>  
-    <id>jdk11</id>  
-    <activation>  
-        <activeByDefault>true</activeByDefault>  
-        <jdk>1.11</jdk>  
-    </activation>  
-    <properties>  
-        <maven.compiler.source>1.11</maven.compiler.source>  
-        <maven.compiler.target>1.11</maven.compiler.target>  
-        <maven.compiler.compilerVersion>1.11</maven.compiler.compilerVersion>  
-    </properties>   
-   </profile> 
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+   <profiles>
+          <profile>
+            <id>jdk</id>
+            <activation>
+                  <activeByDefault>true</activeByDefault>
+                  <jdk>1.8</jdk>
+            </activation>
+            <properties>
+                  <maven.compiler.source>1.8</maven.compiler.source>
+                  <maven.compiler.target>1.8</maven.compiler.target>
+                  <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+          </profile>
+  </profiles>
+</settings>
+
 ```
-
-保存
-
-### 2.在IDEA应用新的maven配置
-
-IDEA-->Setting-->maven--->User setting file-->
-
-默认的是`.m2\settings.xml`，打开目录发现并没有，然后把maven/conf/settings.xml复制到指定目录，即可
-
-![例图](https://github.com/georgezhou314/imageRepo/raw/master/IDEA%E4%BD%BF%E7%94%A8/maven1.png)
-
-### 3. 然后就生效了
-
-因为settings.xml中配置了仓库的位置，所以Local repository会更新为配置的仓库名。
 
 
 
