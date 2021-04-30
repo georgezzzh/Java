@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class IO {
+public class SerializeDemo {
 
     public static void main(String[]args){
       GameCharacter one=new GameCharacter(50,"glf",new String[]{"bow","sword","dust"});
